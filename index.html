@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>YouTube Search API - Jonas Kleiner</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/app.js" type="text/javascript"></script>
-</head>
-<body>
-<form>
-<label>Search YouTube</label>
-<input type="search" id="search-bar"/>	
-<button>Search</button>
-</form>
-
-</body>
+	<head>
+		<title>YouTube Search API - Jonas Kleiner</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/app.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div id="search-box">
+			<form>
+			<label>Search YouTube</label><br />
+			<input type="search" id="search-bar" value="Search YouTube for something" /><br />
+			<button>Search</button>
+			</form>
+		</div>
+		<div class="thumbs-grid">
+			<div class="grid-row grid-row--lg grid-row--md grid-row--sm">
+				<div class="grid-item">Video 1<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 2<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 3<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 4<br /><img src="http://placehold.it/120x90"></div>
+			</div>
+			<div class="grid-row grid-row--lg grid-row--md grid-row--sm">
+				<div class="grid-item">Video 5<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 6<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 7<br /><img src="http://placehold.it/120x90"></div>
+				<div class="grid-item">Video 8<br /><img src="http://placehold.it/120x90"></div>
+			</div>
+		</div>
+	</body>
 </html>
