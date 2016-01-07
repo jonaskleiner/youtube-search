@@ -4,12 +4,10 @@ $(function(){
 
 // show video search results with thumbnail images
 // get search results --> get data from YT
-$.ajax("https://www.googleapis.com/youtube/v3/search", {
-	data: {
-		part: "snippet",
-		key: "AIzaSyAwajfJSd0eNSi91UTVcLCLDAiewr_hdGU",
-		q: "surfing pug dogs"
-	}
+$.getJSON("https://www.googleapis.com/youtube/v3/search", {
+	part: "snippet",
+	key: "AIzaSyAwajfJSd0eNSi91UTVcLCLDAiewr_hdGU",
+	q: "surfing pug dogs"
 })
 .done(function(data){
 	console.log(data);
