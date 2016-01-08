@@ -8,15 +8,14 @@
 }
 
 #search-box {
-	width: 60%;
-	size: 500;
-	padding: 50px;
+	/*width: 60%;*/
 }
 
 #results {
     border: 1px solid silver;
     margin: 0 auto;
     width: 95%;
+    padding-left: 25px;
 }
 
 
@@ -51,4 +50,22 @@
   font-size: 1.2em;
 }
 
-/* MEDIA QUERIES*/
+/* form styling */
+#search-box {
+  padding:8px 15px;
+  background:rgba(50, 50, 50, 0.2);
+  border:0px solid #dbdbdb;
+}
+
+button {
+  position:relative;
+  padding:6px 15px;
+  left:-8px;
+  border:2px solid #207cca;
+  background-color: #207cca;
+  color: #fafafa;
+}
+button:hover  {
+  background-color: #fafafa;
+  color: #207cca;
+}
