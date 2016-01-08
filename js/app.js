@@ -1,23 +1,14 @@
-function getRequestOrig(searchTerm){
-  var params = {
-    s: searchTerm,
-    r: 'json'
-  };
-  url = 'http://www.omdbapi.com';
+// function getRequestOrig(searchTerm){
+//   var params = {
+//     s: searchTerm,
+//     r: 'json'
+//   };
+//   url = 'http://www.omdbapi.com';
 
-  $.getJSON(url, params, function(data){
-    showResults(data.Search);
-  });
-};
-
-// function showResults(results){
-//   var html = "";
-//   $.each(results, function(index,value){
-//     html += '<p>' + value.Title + '</p>';
-//     console.log(value.Title);
+//   $.getJSON(url, params, function(data){
+//     showResults(data.Search);
 //   });
-//   $('#search-results').html(html);
-// }
+// };
 
 function getRequest(searchTerm) {
   // get search results --> get data from YT
@@ -28,7 +19,17 @@ function getRequest(searchTerm) {
   })
   .done(function(data){
     console.log(data);
+    showResults(data);
   });
+}
+
+function showResults(data){
+  var html = "";
+  $.each(results, function(index,value){
+    html += '<li class="flex-item">' + title + '</li>';
+    console.log(title);
+  });
+  $('#results-list').html(html);
 }
 
 $(function(){ 
