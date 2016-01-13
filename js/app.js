@@ -9,27 +9,28 @@
 //     showResults(data.Search);
 //   });
 // };
+function showResults(nuggets){
+  var html = "";
+  $.each(nuggets, function(index,carrot){
+    // need to update the html to include clickable thumbnails
+    html += '<li class="flex-item">' + carrot.snippet.title + '</li>';
+    console.log(carrot.snippet.title);
+  });
+  $('#results-list').html(html);
+}
 
 function getRequest(searchTerm) {
   // get search results --> get data from YT
   $.getJSON("https://www.googleapis.com/youtube/v3/search", {
     part: "snippet",
     key: "AIzaSyAwajfJSd0eNSi91UTVcLCLDAiewr_hdGU",
-    q: searchTerm
+    q: searchTerm,
+    maxResults: 25
   })
-  .done(function(data){
-    console.log(data);
-    showResults(data);
+  .done(function(box){ // receives all the data back from the YT api
+    console.log(box);
+    showResults(box.items); // parses out what we don't want and shows only the 'items' in the Obj
   });
-}
-
-function showResults(data){
-  var html = "";
-  $.each(results, function(index,value){
-    html += '<li class="flex-item">' + title + '</li>';
-    console.log(title);
-  });
-  $('#results-list').html(html);
 }
 
 $(function(){ 
