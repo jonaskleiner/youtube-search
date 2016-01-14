@@ -5,7 +5,7 @@ function showResults(nuggets){
     var vidTitle = carrot.snippet.title;
     var newTitle = vidTitle.substring(0,25);
     newTitle += '...';
-    html += '<li class="flex-item">' + /* carrot.snippet.title */ newTitle  + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '"></li>';
+    html += '<li class="flex-item">' + /* carrot.snippet.title */ newTitle  + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '" width="320" height="180"></li>';
     console.log(carrot.snippet.title);
     // console.log(newTitle);
   });
