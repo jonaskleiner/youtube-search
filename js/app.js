@@ -4,8 +4,9 @@ function showResults(nuggets){
   $.each(nuggets, function(index,carrot){
     var vidTitle = carrot.snippet.title;
     var newTitle = vidTitle.substring(0,25);
+    var vidLink = carrot.id.videoId;
     newTitle += '...';
-    html += '<li class="flex-item">' + /* carrot.snippet.title */ newTitle  + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '" width="320" height="180"></li>';
+    html += '<li class="flex-item"><a href="https://www.youtube.com/watch?v=' + vidLink + '" target="_blank">' + newTitle  + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '" width="320" height="180"></a></li>';
     console.log(carrot.snippet.title);
     // console.log(newTitle);
   });
