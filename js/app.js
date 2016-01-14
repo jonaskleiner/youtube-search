@@ -1,23 +1,23 @@
-// function getRequestOrig(searchTerm){
-//   var params = {
-//     s: searchTerm,
-//     r: 'json'
-//   };
-//   url = 'http://www.omdbapi.com';
-
-//   $.getJSON(url, params, function(data){
-//     showResults(data.Search);
-//   });
-// };
 function showResults(nuggets){
   var html = "";
+  var newTitle;
   $.each(nuggets, function(index,carrot){
-    // need to update the html to include clickable thumbnails
-    html += '<li class="flex-item">' + carrot.snippet.title + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '"></li>';
+    var vidTitle = carrot.snippet.title;
+    var newTitle = vidTitle.substring(0,25);
+    newTitle += '...';
+    html += '<li class="flex-item">' + /* carrot.snippet.title */ newTitle  + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '"></li>';
     console.log(carrot.snippet.title);
+    // console.log(newTitle);
   });
   $('#results-list').html(html);
 }
+
+/*
+function titleTrim() {
+  var vidTitle = carrot.snippet.title;
+  var newTitle = vidTitle.substring(0,30);
+}
+*/
 
 function getRequest(searchTerm) {
   // get search results --> get data from YT
@@ -46,4 +46,3 @@ $(function(){
    // run function 'getRequest' using the value of var searchTerm as the ingredient
   });
 });
-
