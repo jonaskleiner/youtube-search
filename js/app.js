@@ -13,7 +13,7 @@ function showResults(nuggets){
   var html = "";
   $.each(nuggets, function(index,carrot){
     // need to update the html to include clickable thumbnails
-    html += '<li class="flex-item">' + carrot.snippet.title + '</li>';
+    html += '<li class="flex-item">' + carrot.snippet.title + '<br /><img src="' + carrot.snippet.thumbnails.medium.url + '"></li>';
     console.log(carrot.snippet.title);
   });
   $('#results-list').html(html);
