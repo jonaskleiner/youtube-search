@@ -51,6 +51,18 @@
   font-size: 1.2em;
 }
 
+.flex-item a:link,
+.flex-item a:visited,
+.flex-item a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+.flex-item a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 /* form styling */
 #query {
   padding:8px 15px;

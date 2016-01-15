@@ -13,13 +13,6 @@ function showResults(nuggets){
   $('#results-list').html(html);
 }
 
-/*
-function titleTrim() {
-  var vidTitle = carrot.snippet.title;
-  var newTitle = vidTitle.substring(0,30);
-}
-*/
-
 function getRequest(searchTerm) {
   // get search results --> get data from YT
   $.getJSON("https://www.googleapis.com/youtube/v3/search", {
